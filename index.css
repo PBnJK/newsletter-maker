@@ -1,0 +1,210 @@
+html {
+	background-color: #000000;
+	image-rendering: pixelated;
+}
+
+@font-face {
+	font-family: "Determination Sans";
+	src: local("Determination Sans"),
+	     url("font/DeterminationSansWeb.woff") format("woff");
+	font-size: 16pt;
+}
+
+@font-face {
+	font-family: "Determination Mono";
+	src: local("Determination Mono"),
+	     url("font/DeterminationMonoWeb.woff") format("woff");
+	font-size: 16pt;
+}
+
+/* Makes the button + config box not affect other elements */
+#configs {
+	position: absolute;
+}
+
+#toggle-configs {
+	margin-top: 16px;
+	margin-left: 16px;
+}
+
+#config-box {
+	margin-left: 16px;
+	margin-top: 12px;
+
+	padding: 8px;
+
+	display: grid;
+	grid-template-columns: 1fr 24px;
+	grid-template-rows: auto;
+
+	background-color: #FFFFFF;
+
+	border-radius: 8px;
+
+}
+
+#config-box[hidden] {
+	display: none;
+}
+
+label {
+	font-family: "Determination Mono";
+	font-size: 20px;
+}
+
+#about {
+	text-align: center;
+	font-style: italic;
+
+	color: grey;
+}
+
+a {
+	color: white;
+}
+
+/* Main content of the page
+ * Centered horizontally
+ */
+main {
+	width: 100%;
+	max-width: 600px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* "UNDERTALE/DELTARUNE" logo image */
+#logo {
+	margin-top: 60px;
+}
+
+/* Style input under the main tag */
+main input {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	padding: 0;
+
+	height: 30px;
+
+	width: 100%;
+	max-width: 600px;
+
+	text-align: center;
+
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+/* Subtitle under the "UNDERTALE/DELTARUNE" logo */
+input#subtitle {
+	font-size: 36px;
+	letter-spacing: 0.08em;
+	
+	text-transform: uppercase;
+
+	/* Stretch it up a bit (toby fox......) */
+	transform: scaleY(1.125);
+}
+
+.yellow-sans {
+	font-family: "Determination Sans";
+	color: #FFFF00;
+}
+
+input#date {
+	font-family: "Determination Sans";
+	color: #FFFFFF;
+
+	margin-top: 48px;
+	margin-bottom: 128px;
+
+	font-size: 48px;
+	letter-spacing: 0.05em;
+	height: 48px;
+}
+
+/* Style textarea under the main tag */
+.body {
+	margin-bottom: 80px;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0 12px 0 12px;
+
+	resize: vertical;
+
+	width: 100%;
+	max-width: 600px;
+
+	border: none;
+	outline: none;
+	background: transparent;
+
+	font-family: "Determination Sans";
+	letter-spacing: 0.08em;
+	font-size: 24px;
+	color: #FFFFFF;
+
+	word-wrap: break-word;
+}
+
+.body[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: grey; 
+}
+
+.body:hover {
+	cursor: text;
+}
+
+.body div {
+	width: 100%;
+	max-width: 600px;
+
+	word-wrap: break-word;
+}
+
+#image-change {
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-bottom: 80px;
+
+	width: 100%;
+	max-width: 600px;
+}
+
+#image-change-btn {
+	display: block;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 100%;
+	max-width: fit-content;
+
+	border: none;
+	outline: none;
+	background: transparent;
+
+	padding: 0;
+
+	font-family: "Determination Sans";
+	font-size: 24px;
+	color: #FFFFFF;
+}
+
+#image-sub {
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-size: 16px;
+    color: #FFFFFF; 
+}

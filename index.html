@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!--
+Hello curious person!
+
+It's cool to see people trying to see how things work... that's what you're
+trying to do, right? There aren't any secrets here; I'm not Toby Fox...
+
+It's just a bunch of <input> tags... not very exciting! If you're reading this
+on the website, you can find everything on the github:
+
+https://github.com/PBnJK/newsletter-maker
+-->
+
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width"/>
+    	<title>Newsletter maker</title>
+
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<div id="configs">
+			<button id="toggle-configs" onclick="handleTgConfigs();">Configurations</button>
+			<div id="config-box" hidden >
+				<label for="c-has-subtitle">Toggle Subtitle</label>
+				<input id="c-tg-subtitle" type="checkbox" name="c-has-subtitle" onclick="handleTgSub(this);" checked />
+
+				<label for="c-has-date">Toggle Date</label>
+				<input id="c-tg-date" type="checkbox" name="c-has-date" onclick="handleTgDate(this);" checked />
+
+				<label for="c-has-bf-body">Toggle Before Body</label>
+				<input id="c-tg-bf-body" type="checkbox" name="c-has-bf-body" onclick="handleTgBfBody(this);" checked />
+
+				<label for="c-has-image">Toggle Image</label>
+				<input id="c-tg-image" type="checkbox" name="c-has-image" onclick="handleTgImage(this);" checked />
+
+				<label for="c-has-image-sub">Toggle Image Subtitle</label>
+				<input id="c-tg-image-sub" type="checkbox" name="c-has-image-sub" onclick="handleTgImageSub(this);" checked />
+
+				<label for="c-has-af-body">Toggle After Body</label>
+				<input id="c-tg-af-body" type="checkbox" name="c-has-af-body" onclick="handleTgAfBody(this);" checked />
+
+				<label for="c-has-credits">Toggle Credits</label>
+				<input id="c-tg-credits" type="checkbox" name="c-has-credits" onclick="handleTgCredits(this);" checked />
+			</div>
+		</div>
+
+	
+		<main>
+			<div id="logo">
+				<img src="image/logo.png" alt="">
+				<input id="subtitle" placeholder="type a subtitle!" class="yellow-sans"/>
+			</div>
+
+			<input id="date" placeholder="Type a date or whatever!"/>
+
+			<div id="bf-body" class="body" placeholder="Type some funny text!"
+				 contenteditable></div>
+
+			<div id="image-change">
+				<button id="image-change-btn" onclick="changeImage();">
+					<img src="image/alphys_sippy.png" id="image"/>
+				</button>
+
+				<input id="image-sub" placeholder="type an image subtitle! (also click the image above to change it)"/>
+			</div>
+			
+			<div id="af-body" class="body" placeholder="Type some *informative* text!"
+				 contenteditable></div>
+
+			<input id="file-input" type="file" name="name" style="display: none;" />
+
+			<p id="about">
+				Fonts are Determination Sans and Determination Mono.<br>
+				Source can be found on this link: <a href="https://github.com/PBnJK/newsletter-maker">link</a>
+			</p>	
+		</main>
+	</body>
+</html>
