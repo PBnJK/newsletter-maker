@@ -26,11 +26,11 @@ function handleTgDate(cb) {
 	const THING = document.getElementById("date");
 	hideThing(THING, cb);
 
-	const BF = document.getElementById("bf-body");
+	const SUB = document.getElementById("subtitle");
 	if( THING.hidden ) {
-		BF.style["margin-top"] = "128px";
+		SUB.style["margin-bottom"] = "128px";
 	} else {
-		BF.style["margin-top"] = "0px";
+		SUB.style["margin-bottom"] = "0px";
 	}
 }
 
