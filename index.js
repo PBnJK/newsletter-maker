@@ -23,7 +23,15 @@ function handleTgSub(cb) {
 
 /* Toggle date */
 function handleTgDate(cb) {
-	hideThing(document.getElementById("date"), cb);
+	const THING = document.getElementById("date");
+	hideThing(THING, cb);
+
+	const BF = document.getElementById("bf-body");
+	if( THING.hidden ) {
+		BF.style["margin-top"] = "128px";
+	} else {
+		BF.style["margin-top"] = "0px";
+	}
 }
 
 /* Toggle before body */
